@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", system-ui;
+  /* background: radial-gradient(circle, #D8E1F1 0%, #EAF4F3 77%, #F1F2F4 100%); */
+  background: radial-gradient(circle at top left, #D8E1F1 0%, #EAF4F3 77%, #F1F2F4 100%);
+
+}
+
+
+@layer base {
+  body {
+    @apply selection:text-white selection:bg-primary select-none;
+  }
+
+  .transitions {
+    @apply transition-all ease-in-out duration-500;
+  }
+
+  .btn-primary-sm {
+    @apply text-white font-button bg-[#2E1D6A] rounded-[16px] px-[16px] py-[10px] font-bold text-sm transitions border hover:bg-white hover:border-[#2E1D6A] hover:text-[#2E1D6A];
+  }
+
+  .btn-primary-lg {
+    @apply text-white font-button bg-[#2E1D6A] rounded-[16px] px-[18px] py-[12px] font-bold text-sm transition duration-300 ease-linear border hover:bg-white hover:border-[#2E1D6A] hover:text-[#2E1D6A];
+  }
+
+  .padding-inline {
+    @apply sm:px-[32px] px-[28px];
+  }
+
+  .custom-width {
+    @apply xl:max-w-[1250px] 2xl:max-w-[1400px] lg:max-w-[1080px] mx-auto w-full xl:px-[20px] lg:px-[20px] px-[25px];
+    /* @apply xl:max-w-[1360px] lg:max-w-[1100px] md:max-w-[890px] mx-auto w-full xl:px-[20px] px-[32px]; */
+  }
+
+  .custom-padding {
+    @apply xl:px-[90px] lg:px-[90px] px-[25px];
+  }
+
+  .padding-block {
+    @apply md:my-[120px] my-[80px];
+  }
+}

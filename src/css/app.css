@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    border: 2px solid #D8E1F1;
+    background: #341D6A;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    /* background-color: #D8E1F1; */
+    background: radial-gradient(circle at top left, #d8e1f1d3 0%, #EAF4F3 77%, #F1F2F4 100%);
+    border-radius: 50px !important;
+}
