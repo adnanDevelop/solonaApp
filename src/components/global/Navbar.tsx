@@ -11,11 +11,6 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
     {
       name: "More",
-      links: [
-        { name: "Companies", path: "/companies" },
-        { name: "Candidates", path: "/candidates" },
-        { name: "Career", path: "/career" },
-      ],
     },
   ];
 
@@ -39,79 +34,43 @@ const Navbar = () => {
   //   setOpen(!open);
   // };
 
-  const handleClick = () => {
-    const elem = document.activeElement as HTMLElement;
-    if (elem) {
-      elem.blur();
-    }
-  };
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* large screen navbar */}
       <nav
-        className={`flex items-center justify-between w-full sm:h-[75px] h-[55px] padding-inline transitions fixed top-0 left-0 z-[10] ${
-          scrollAnimation ? "" : "lg:bg-light-green bg-dark-blue"
+        className={` w-full  padding-inline transitions fixed top-0 left-0 z-[10] ${
+          scrollAnimation ? "bg-black" : "bg-black"
         }`}
       >
-        {/* Logo section */}
-        <div>
-          <img src="/image/logo-light.png" className="hidden md:block" alt="" />
-          <img
-            src="/image/small-logo.png"
-            className="block md:hidden w-[35px] object-cover"
-            alt=""
-          />
-        </div>
+        <div className="flex items-center justify-between custom-width sm:h-[75px] h-[55px]">
+          {/* Logo section */}
+          <div>
+            <img src="/image/logo.png" className="hidden md:block" alt="" />
+            <img
+              src="/image/small-logo.png"
+              className="block md:hidden w-[35px] object-cover"
+              alt=""
+            />
+          </div>
 
-        {/* links */}
-        <div className="hidden lg:block">
-          <div className="flex items-center justify-center text-sm font-medium text-white gap-x-6 ">
-            {links.map((link, index: number) => {
-              return link?.links ? (
-                <div
-                  key={index}
-                  className="rounded-md dropdown dropdown-bottom dropdown-end"
-                >
-                  <div
-                    tabIndex={0}
-                    role="button"
-                    className="flex items-center justify-center text-sm focus:text-green"
+          {/* links */}
+          <div className="hidden lg:block">
+            <div className="flex items-center justify-center text-sm font-medium text-white gap-x-6 ">
+              {links.map((link, index: number) => {
+                return (
+                  <a
+                    key={index}
+                    className={`transitions hover:text-green`}
+                    href={link?.path}
+                    onClick={() => {
+                      window.scrollTo({ top: 0 });
+                    }}
                   >
-                    More
-                  </div>
-                  {/* dropdown links */}
-                  <ul
-                    tabIndex={0}
-                    className="dropdown-content !top-[200%] menu rounded-xl p-2 z-[1] w-[180px] bg-dark-blue shadow border-b-2 border-b-green"
-                  >
-                    {link.links.map((sublink, subIndex: number) => (
-                      <li key={subIndex} onClick={handleClick}>
-                        <a
-                          href={sublink.path}
-                          className="p-2 font-medium text-white bg-transparent rounded-md transitions hover:bg-green text-content-color hover:text-white focus:text-white"
-                          onClick={() => {
-                            window.scrollTo({ top: 0 });
-                          }}
-                        >
-                          {sublink.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
-                <a
-                  key={index}
-                  className={`transitions hover:text-green`}
-                  href={link?.path}
-                  onClick={() => {
-                    window.scrollTo({ top: 0 });
-                  }}
-                >
-                  {link?.name}
-                </a>
-              );
-            })}
+                    {link?.name}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </nav>
