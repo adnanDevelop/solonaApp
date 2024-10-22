@@ -9,7 +9,9 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
-        "light-green": "#18B29633",
+        content: "#C4C4C4",
+
+        green: "#14F195",
         yellow: "#FFB800",
         "light-yellow": "#FFB80033",
         pink: "#FF6A6D",

@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply select-none selection:text-white selection:bg-primary font-helvetica;
+    @apply !bg-black select-none selection:text-white selection:bg-primary font-helvetica;
   }
 
   .transitions {
@@ -26,8 +26,8 @@
   }
 
   .custom-width {
-    @apply xl:max-w-[1250px] 2xl:max-w-[1400px] lg:max-w-[1080px] mx-auto w-full xl:px-[20px] lg:px-[20px] px-[25px];
-    /* @apply xl:max-w-[1360px] lg:max-w-[1100px] md:max-w-[890px] mx-auto w-full xl:px-[20px] px-[32px]; */
+    @apply xl:max-w-[1150px] 2xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[700px] md:px-0 px-8 mx-auto w-full;
+
   }
 
   .custom-padding {

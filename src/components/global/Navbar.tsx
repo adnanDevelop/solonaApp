@@ -5,7 +5,6 @@ const Navbar = () => {
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Jobs", path: "/jobs" },
     { name: "Service", path: "/service" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
@@ -28,26 +27,24 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", windowScroll);
   }, []);
 
-  // // Sidebar function
-  // const openSidebar = () => {
-  //   showSideBar(!sideBar);
-  //   setOpen(!open);
-  // };
-
   return (
     <div className="relative ">
       {/* large screen navbar */}
       <nav
-        className={` w-full  padding-inline transitions fixed top-0 left-0 z-[10] ${
+        className={`w-full transitions fixed top-0 left-0 z-[10] ${
           scrollAnimation ? "bg-black" : "bg-black"
         }`}
       >
-        <div className="flex items-center justify-between custom-width sm:h-[75px] h-[55px]">
+        <div className="flex items-center justify-between custom-width h-[65px] ">
           {/* Logo section */}
           <div>
-            <img src="/image/logo.png" className="hidden md:block" alt="" />
             <img
-              src="/image/small-logo.png"
+              src="/image/logo.png"
+              className="hidden md:block w-[180px] object-cover"
+              alt=""
+            />
+            <img
+              src="/image/logo-img.svg"
               className="block md:hidden w-[35px] object-cover"
               alt=""
             />
@@ -55,12 +52,12 @@ const Navbar = () => {
 
           {/* links */}
           <div className="hidden lg:block">
-            <div className="flex items-center justify-center text-sm font-medium text-white gap-x-6 ">
+            <div className="flex items-center justify-center text-sm font-medium gap-x-8 ">
               {links.map((link, index: number) => {
                 return (
                   <a
                     key={index}
-                    className={`transitions hover:text-green`}
+                    className={`transitions text-[#848895] hover:text-white`}
                     href={link?.path}
                     onClick={() => {
                       window.scrollTo({ top: 0 });
