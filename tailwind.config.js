@@ -12,6 +12,7 @@ export default {
         content: "#C4C4C4",
 
         green: "#14F195",
+        purple: "#9945FF",
         yellow: "#FFB800",
         "light-yellow": "#FFB80033",
         pink: "#FF6A6D",

@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply !bg-black select-none selection:text-white selection:bg-primary font-helvetica;
+    @apply !bg-black select-none font-helvetica;
   }
 
   .transitions {
