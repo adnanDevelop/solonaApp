@@ -6,10 +6,20 @@ const EcoSystem = () => {
     <main className="custom-width padding-block" id="service">
       {/* Header Section */}
       <section>
-        <h1 className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium ">
+        <h1
+          className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium "
+          data-aos="fade-zoom-in"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-sine"
+        >
           Dig deeper.
         </h1>
-        <p className="mt-2 text-sm text-content sm:text-lg text-light">
+        <p
+          className="mt-2 text-sm text-content sm:text-lg text-light"
+          data-aos="zoom-in-out"
+          data-aos-duration="1400"
+          data-aos-easing="ease-in-sine"
+        >
           Learn from resources across the greater Solana ecosystem.
         </p>
       </section>
@@ -22,7 +32,12 @@ const EcoSystem = () => {
             index: number
           ) => {
             return (
-              <div className="relative p-[2px] overflow-hidden bg-[#3c3939d7] rounded-md lg:col-span-4 sm:col-span-6 col-span-full flex items-center justify-center group">
+              <div
+                className="relative p-[2px] overflow-hidden bg-[#3c3939d7] rounded-md lg:col-span-4 sm:col-span-6 col-span-full flex items-center justify-center group"
+                data-aos="fade-zoom-in"
+                data-aos-duration={0.5 * 1000}
+                data-aos-easing="ease-in-sine"
+              >
                 <div className="w-[120px] h-[250%] bg-gradient-to-l from-purple to-[#3c3939d7] absolute   border_animation  opacity-0 transitions group-hover:opacity-100" />
                 <div
                   key={index}

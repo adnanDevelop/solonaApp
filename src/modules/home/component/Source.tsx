@@ -7,10 +7,20 @@ const Source = () => {
       <section className="custom-width">
         {/* Header Section */}
         <div>
-          <h1 className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium ">
+          <h1
+            className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium "
+            data-aos="fade-zoom-in"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-sine"
+          >
             Go to the source.
           </h1>
-          <p className="mt-2 text-sm text-content sm:text-lg text-light">
+          <p
+            className="mt-2 text-sm text-content sm:text-lg text-light"
+            data-aos="zoom-in-out"
+            data-aos-duration="1400"
+            data-aos-easing="ease-in-sine"
+          >
             Read the documentation for Solana and popular tools.
           </p>
         </div>
@@ -22,6 +32,9 @@ const Source = () => {
                 <div
                   key={index}
                   className="mb-6 md:col-span-6 col-span-full lg:mb-0"
+                  data-aos="fade-zoom-in"
+                  data-aos-duration={0.5 * 1000}
+                  data-aos-easing="ease-in-sine"
                 >
                   <div className="flex items-center justify-between">
                     <h3 className="xl:text-[30px] md:text-[26px] text-[22px] text-white capitalize font-poppin ">
@@ -43,7 +56,12 @@ const Source = () => {
               );
             }
           )}
-          <div className="mb-6 md:col-span-6 col-span-full lg:mb-0">
+          <div
+            className="mb-6 md:col-span-6 col-span-full lg:mb-0"
+            data-aos="fade-zoom-in"
+            data-aos-duration={1800}
+            data-aos-easing="ease-in-sine"
+          >
             <h3 className="xl:text-[30px] md:text-[26px] text-[22px] text-white capitalize font-poppin ">
               Solana Changelog
             </h3>
@@ -61,6 +79,9 @@ const Source = () => {
               src="/image/footer-img.svg"
               //   className="lg:w-auto max-w-[300px] md:max-w-[450px]"
               alt=""
+              data-aos="fade-zoom-in"
+              data-aos-duration={1800}
+              data-aos-easing="ease-in-sine"
             />
           </div>
         </div>
@@ -68,7 +89,12 @@ const Source = () => {
         {/* Social Section  */}
         <div className="grid gap-y-4 md:gap-6 md:grid-cols-2 padding-block">
           {/* First Card */}
-          <div className="xl:pt-[50px] sm:pt-[40px] pt-[30px] xl:pb-[45px] sm:pb-[40px] pb-[30px] xl:px-[45px] sm:px-[30px] px-[20px] rounded-lg bg-[#19161C] ">
+          <div
+            className="xl:pt-[50px] sm:pt-[40px] pt-[30px] xl:pb-[45px] sm:pb-[40px] pb-[30px] xl:px-[45px] sm:px-[30px] px-[20px] rounded-lg bg-[#19161C] "
+            data-aos="fade-zoom-in"
+            data-aos-duration={1800}
+            data-aos-easing="ease-in-sine"
+          >
             <h3 className="text-white font-poppin xl:text-[35px] text-[22px] lg:mb-0 mb-1.5">
               Solana Developer Update
             </h3>
@@ -89,7 +115,12 @@ const Source = () => {
           </div>
 
           {/* Second Card */}
-          <div className="xl:pt-[50px] sm:pt-[40px] pt-[30px] xl:pb-[45px] sm:pb-[40px] pb-[30px] xl:px-[45px] sm:px-[30px] px-[20px] rounded-lg bg-[#19161C] ">
+          <div
+            className="xl:pt-[50px] sm:pt-[40px] pt-[30px] xl:pb-[45px] sm:pb-[40px] pb-[30px] xl:px-[45px] sm:px-[30px] px-[20px] rounded-lg bg-[#19161C] "
+            data-aos="fade-zoom-in"
+            data-aos-duration={2200}
+            data-aos-easing="ease-in-sine"
+          >
             <h3 className="text-white font-poppin xl:text-[35px] text-[22px] lg:mb-0 mb-1.5">
               Even more resources
             </h3>

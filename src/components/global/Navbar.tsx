@@ -8,11 +8,11 @@ const Navbar = () => {
   const [sideBar, showSideBar] = useState<boolean>(false);
 
   const links = [
-    { name: "Home", path: "hero" },
-    { name: "About", path: "about" },
-    { name: "Service", path: "service" },
-    { name: "Blog", path: "blog" },
-    { name: "Contact", path: "contact" },
+    { name: "Home", path: "#hero" },
+    { name: "About", path: "#about" },
+    { name: "Service", path: "#service" },
+    { name: "Blog", path: "#blog" },
+    { name: "Contact", path: "#contact" },
   ];
 
   useEffect(() => {
@@ -47,7 +47,11 @@ const Navbar = () => {
       <nav className="w-full transitions fixed top-0 left-0 z-[50] bg-black">
         <div className="flex items-center justify-between custom-width h-[65px] ">
           {/* Logo section */}
-          <div>
+          <div
+            data-aos="zoom-in-out"
+            data-aos-duration="600"
+            data-aos-easing="linear"
+          >
             <Link to="hero" spy={true} smooth={true} duration={500}>
               <>
                 <img
@@ -68,17 +72,23 @@ const Navbar = () => {
           <div className="hidden lg:block">
             <div className="flex items-center justify-center text-sm font-medium gap-x-8 ">
               {links.map((link, index: number) => (
-                <Link
-                  to={link?.path}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  key={index}
-                  className="transitions text-[#848895] hover:text-green cursor-pointer"
-                  onClick={() => window.scrollTo({ top: 0 })}
+                <p
+                  data-aos="zoom-in-out"
+                  data-aos-duration={0.5 * index}
+                  data-aos-easing="linear"
                 >
-                  {link?.name}
-                </Link>
+                  <a
+                    href={link?.path}
+                    // spy={true}
+                    // smooth={true}
+                    // duration={500}
+                    key={index}
+                    className="transitions text-[#848895] hover:text-green cursor-pointer"
+                    onClick={() => window.scrollTo({ top: 0 })}
+                  >
+                    {link?.name}
+                  </a>
+                </p>
               ))}
             </div>
           </div>
