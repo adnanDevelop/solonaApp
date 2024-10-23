@@ -50,3 +50,18 @@
 .source-gradient {
     background: linear-gradient(rgba(25, 22, 28, 1), rgba(0, 0, 0, 1));
 }
+
+.border_animation {
+    animation: borderAnimation 10s infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}

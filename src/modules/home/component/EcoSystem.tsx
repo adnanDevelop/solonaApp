@@ -22,26 +22,28 @@ const EcoSystem = () => {
             index: number
           ) => {
             return (
-              <div
-                key={index}
-                className="lg:col-span-4 sm:col-span-6 col-span-full z-[10] relative overflow-hidden flex flex-col justify-between items-start rounded-lg p-[20px] bg-[#19161C] h-[282px] w-full cursor-pointer"
-              >
-                <div className="absolute bottom-0 left-0 w-[140px] rounded-full z-[-1] h-[80px] card-gradient" />
-                <div>
-                  <span className="mb-1 text-xs font-medium uppercase text-purple font-poppin">
-                    {element?.label}
-                  </span>
-                  <h3 className="font-medium text-white font-helvetica text-[20px] mb-3">
-                    {element?.title}
-                  </h3>
-                  <p className="text-base font-light font-poppin text-content">
-                    {element?.content}
-                  </p>
+              <div className="relative p-[2px] overflow-hidden bg-[#3c3939d7] rounded-md lg:col-span-4 sm:col-span-6 col-span-full flex items-center justify-center group">
+                <div className="w-[120px] h-[250%] bg-gradient-to-l from-purple to-[#3c3939d7] absolute   border_animation  opacity-0 transitions group-hover:opacity-100" />
+                <div
+                  key={index}
+                  className="z-[10] relative flex flex-col justify-between items-start rounded-lg p-[20px]  h-[282px] w-full cursor-pointer bg-[#19161C]"
+                >
+                  <div>
+                    <span className="mb-1 text-xs font-medium uppercase text-purple font-poppin">
+                      {element?.label}
+                    </span>
+                    <h3 className="font-medium text-white font-helvetica text-[20px] mb-3">
+                      {element?.title}
+                    </h3>
+                    <p className="text-base font-light font-poppin text-content">
+                      {element?.content}
+                    </p>
+                  </div>
+                  <button className="flex items-center gap-2 text-sm font-light text-white transitions hover:text-purple font-poppin group">
+                    LEARN MORE{" "}
+                    <GoArrowUpRight className="text-lg group-hover:text-purple transitions" />
+                  </button>
                 </div>
-                <button className="flex items-center gap-2 text-sm font-light text-white transitions hover:text-purple font-poppin group">
-                  LEARN MORE{" "}
-                  <GoArrowUpRight className="text-lg group-hover:text-purple transitions" />
-                </button>
               </div>
             );
           }
