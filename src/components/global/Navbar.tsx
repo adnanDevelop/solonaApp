@@ -18,7 +18,7 @@ const Navbar = () => {
     const windowScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && window.scrollY > 50) {
+      if (currentScrollY > lastScrollY && window.scrollY > 20) {
         document.querySelector("nav")?.classList.add("nav-hide");
         document.querySelector("nav")?.classList.remove("nav-show");
       } else {
