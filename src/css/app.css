@@ -13,3 +13,31 @@
     background-color: black;
     border-radius: 50px !important;
 }
+
+.nav-show {
+    animation: navShowAnimation 0.3s ease-in-out forwards;
+}
+
+.nav-hide {
+    animation: navHideAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes navShowAnimation {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes navHideAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10rem);
+    }
+}
