@@ -3,7 +3,7 @@ import { getStartedData } from "../data";
 
 const GetStarted = () => {
   return (
-    <main className="custom-width pt-[50px]">
+    <main className="custom-width pt-[50px]" id="about">
       <section>
         <h1 className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium ">
           Get started

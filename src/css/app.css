@@ -5,7 +5,8 @@
 ::-webkit-scrollbar-thumb {
     width: 8px;
     border: 3px solid black;
-    background: #14F195;
+    /* background: #14F195; */
+    background: #9945FF;
     border-radius: 50px;
 }
 
@@ -15,16 +16,16 @@
 }
 
 .nav-show {
-    animation: navShowAnimation 0.3s ease-in-out forwards;
+    animation: navShowAnimation 0.2s ease-in-out forwards;
 }
 
 .nav-hide {
-    animation: navHideAnimation 0.3s ease-in-out forwards;
+    animation: navHideAnimation 0.2s ease-in-out forwards;
 }
 
 @keyframes navShowAnimation {
     0% {
-        transform: translateY(-10rem);
+        transform: translateY(-65px);
     }
 
     100% {
@@ -38,7 +39,7 @@
     }
 
     100% {
-        transform: translateY(-10rem);
+        transform: translateY(-65px);
     }
 }
 

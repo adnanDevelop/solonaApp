@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const EcoSystem = () => {
   return (
-    <main className="custom-width padding-block">
+    <main className="custom-width padding-block" id="service">
       {/* Header Section */}
       <section>
         <h1 className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium ">

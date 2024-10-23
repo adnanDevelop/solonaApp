@@ -1,14 +1,28 @@
 // links
+import { FaArrowUp } from "react-icons/fa6";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 border-t-[#141414] rounded-[30px] bg-[#000508]">
+    <footer
+      className="border-t-2 relative border-t-[#141414] rounded-[30px] bg-[#000508]"
+      id="contact"
+    >
+      <Link
+        to="hero"
+        spy={true}
+        smooth={true}
+        duration={900}
+        className="w-[40px] h-[40px] cursor-pointer rotate-[45deg] flex items-center justify-center bg-[#141414] rounded-sm text-content absolute top-[-20px] left-1/2 -translate-x-1/2 transitions hover:text-white hover:bg-purple"
+      >
+        <FaArrowUp className="rotate-[-45deg] " />
+      </Link>
       <section className="custom-width py-[50px] md:grid grid-cols-12">
         {/* First section */}
         <div className="col-span-6 pe-4 ">

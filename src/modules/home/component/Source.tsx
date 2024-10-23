@@ -3,7 +3,7 @@ import { sourceData } from "../data";
 
 const Source = () => {
   return (
-    <main className="source-gradient pt-[70px] pb-[40px]">
+    <main className="source-gradient pt-[70px] pb-[40px]" id="blog">
       <section className="custom-width">
         {/* Header Section */}
         <div>

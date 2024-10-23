@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <main className="pt-[60px] relative">
+    <main className="pt-[60px] relative" id="hero">
       <div className="items-center justify-between lg:flex custom-width">
         {/* Hero Content */}
         <section className="basis-1/3 lg:pt-0 pt-[50px] lg:text-left text-center">
