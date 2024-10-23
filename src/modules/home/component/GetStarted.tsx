@@ -1,42 +1,10 @@
 import { FaArrowRight } from "react-icons/fa6";
+import { getStartedData } from "../data";
 
 const GetStarted = () => {
-  const content = [
-    {
-      title: "Buildspance",
-      label: "15 Chapters",
-      image: "/image/getStarted/img-2.png",
-    },
-    {
-      title: "solana Bytes",
-      label: "12 Chapters",
-      image: "/image/getStarted/img-3.png",
-    },
-    {
-      title: "Scaffold Series",
-      label: "1 Chapter",
-      image: "/image/getStarted/img-4.png",
-    },
-    {
-      title: "Freecodecamp Solana Course",
-      label: "3 Chapter",
-      image: "/image/getStarted/img-5.png",
-    },
-    {
-      title: "Solana Development by Knox",
-      label: "164 Chapter",
-      image: "/image/getStarted/img-6.png",
-    },
-    {
-      title: "Solana Bootcamp",
-      label: "8 Chapter",
-      image: "/image/getStarted/img-7.png",
-    },
-  ];
-
   return (
     <main className="custom-width pt-[50px]">
-      <section className="">
+      <section>
         <h1 className="text-white lg:text-[38px] sm:text-[55px] text-[35px] leading-none font-medium ">
           Get started
         </h1>
@@ -64,30 +32,35 @@ const GetStarted = () => {
             </button>
           </div>
         </div>
-        {content?.map((element, index) => {
-          return (
-            <div
-              key={index}
-              className={`lg:col-span-4 sm:col-span-6 col-span-full  p-[20px] relative rounded-lg w-full md:h-[320px] h-[280px] flex items-end bg-cover bg-center bg-no-repeat`}
-              style={{ backgroundImage: `url('${element?.image}')` }}
-            >
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.5] z-[5] " />
-              <div className="z-[10] w-full">
-                <span className="px-4 py-1 text-sm text-white rounded-full bg-purple ">
-                  {element?.label}
-                </span>
-                <div className="flex items-center justify-between mt-1.5">
-                  <p className="text-lg text-white capitalize font-helvetica sm:text-base text-light max-w-[350px]">
-                    {element?.title}
-                  </p>
-                  <button className="w-[35px] h-[35px] text-sm flex items-center justify-center border border-content text-content rounded-full transitions hover:border-green hover:text-green">
-                    <FaArrowRight />
-                  </button>
+        {getStartedData?.map(
+          (
+            element: { image: string; label: string; title: string },
+            index: number
+          ) => {
+            return (
+              <div
+                key={index}
+                className={`lg:col-span-4 sm:col-span-6 col-span-full  p-[20px] relative rounded-lg w-full md:h-[320px] h-[280px] flex items-end bg-cover bg-center bg-no-repeat`}
+                style={{ backgroundImage: `url('${element?.image}')` }}
+              >
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.5] z-[5] " />
+                <div className="z-[10] w-full">
+                  <span className="px-4 py-1 text-sm text-white rounded-full bg-purple ">
+                    {element?.label}
+                  </span>
+                  <div className="flex items-center justify-between mt-1.5">
+                    <p className="text-lg text-white capitalize font-helvetica sm:text-base text-light max-w-[350px]">
+                      {element?.title}
+                    </p>
+                    <button className="w-[35px] h-[35px] text-sm flex items-center justify-center border border-content text-content rounded-full transitions hover:border-green hover:text-green">
+                      <FaArrowRight />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          }
+        )}
       </section>
     </main>
   );
