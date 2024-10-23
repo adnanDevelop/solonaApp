@@ -81,3 +81,16 @@ export const deeperContent = [
       "A list of curated examples for a wide range of use cases implemented using on-chain programs.s",
   },
 ];
+
+export const sourceData = [
+  {
+    title: "Solana Docs",
+    content:
+      "Learn how Solana works and get a high-level understanding of Solana's architecture.",
+  },
+  {
+    title: "Metaplex Docs",
+    content:
+      "Learn what you build with Metaplex, make the process of creating and launching NFTs easier.",
+  },
+];

@@ -43,6 +43,9 @@
 }
 
 .gradient-background {
-
     background: radial-gradient(circle, rgba(240, 135, 255, 0.3) 0%, black 80%);
+}
+
+.source-gradient {
+    background: linear-gradient(rgba(25, 22, 28, 1), rgba(0, 0, 0, 1));
 }

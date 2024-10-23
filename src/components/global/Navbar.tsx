@@ -18,7 +18,7 @@ const Navbar = () => {
     const windowScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && window.scrollY > 20) {
+      if (currentScrollY > lastScrollY && window.scrollY > 50) {
         document.querySelector("nav")?.classList.add("nav-hide");
         document.querySelector("nav")?.classList.remove("nav-show");
       } else {
@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Large screen Navbar */}
-      <nav className="w-full transitions fixed top-0 left-0 z-[10] bg-black">
+      <nav className="w-full transitions fixed top-0 left-0 z-[50] bg-black">
         <div className="flex items-center justify-between custom-width h-[65px] ">
           {/* Logo section */}
           <div>
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       <div>
         <div
-          className={`fixed w-[250px] h-screen bg-dark-blue border-r-2 border-r-green rounded-tr-xl top-0 transitions overflow-y-auto z-10 bg-black ${
+          className={`fixed w-[250px] h-screen bg-dark-blue border-r-2 border-r-green rounded-tr-xl top-0 transitions overflow-y-auto z-[60] bg-black ${
             sideBar ? " left-[0%]" : "left-[-200%]"
           } `}
         >

@@ -1,11 +1,12 @@
 import { deeperContent } from "../data";
+import { GoArrowUpRight } from "react-icons/go";
 
 const EcoSystem = () => {
   return (
     <main className="custom-width padding-block">
       {/* Header Section */}
       <section>
-        <h1 className="text-white lg:text-[38px] sm:text-[55px] text-[35px] leading-none font-medium ">
+        <h1 className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium ">
           Dig deeper.
         </h1>
         <p className="mt-2 text-sm text-content sm:text-lg text-light">
@@ -14,7 +15,7 @@ const EcoSystem = () => {
       </section>
 
       {/* Card Section */}
-      <section className="grid grid-cols-12 gap-6">
+      <section className="grid grid-cols-12 gap-6 mt-[30px]">
         {deeperContent.map(
           (
             element: { title: string; label: string; content: string },
@@ -23,8 +24,9 @@ const EcoSystem = () => {
             return (
               <div
                 key={index}
-                className="col-span-4 flex flex-col justify-between items-start rounded-lg p-[20px] bg-[#19161C] h-[282px] w-full"
+                className="lg:col-span-4 sm:col-span-6 col-span-full z-[10] relative overflow-hidden flex flex-col justify-between items-start rounded-lg p-[20px] bg-[#19161C] h-[282px] w-full cursor-pointer"
               >
+                <div className="absolute bottom-0 left-0 w-[140px] rounded-full z-[-1] h-[80px] card-gradient" />
                 <div>
                   <span className="mb-1 text-xs font-medium uppercase text-purple font-poppin">
                     {element?.label}
@@ -36,8 +38,9 @@ const EcoSystem = () => {
                     {element?.content}
                   </p>
                 </div>
-                <button className="font-light text-white transitions hover:text-purple font-poppin">
-                  LEARN MORE
+                <button className="flex items-center gap-2 text-sm font-light text-white transitions hover:text-purple font-poppin group">
+                  LEARN MORE{" "}
+                  <GoArrowUpRight className="text-lg group-hover:text-purple transitions" />
                 </button>
               </div>
             );

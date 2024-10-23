@@ -5,10 +5,10 @@ const GetStarted = () => {
   return (
     <main className="custom-width pt-[50px]">
       <section>
-        <h1 className="text-white lg:text-[38px] sm:text-[55px] text-[35px] leading-none font-medium ">
+        <h1 className="text-white xl:text-[55px] lg:text-[45px] md:text-[40px] text-[35px] leading-none font-medium ">
           Get started
         </h1>
-        <p className="mt-2 text-sm text-content sm:text-lg text-light">
+        <p className="mt-2 text-sm font-light text-content sm:text-lg font-poppin">
           Use these Solana Foundation and community courses to begin your
           journey into Solana development.
         </p>
