@@ -52,7 +52,7 @@
 }
 
 .border_animation {
-    animation: borderAnimation 10s infinite;
+    animation: borderAnimation 5s infinite linear;
 }
 
 @keyframes borderAnimation {
