@@ -26,7 +26,7 @@
   }
 
   .custom-width {
-    @apply xl:max-w-[1150px] 2xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[700px] md:px-0 px-8 mx-auto w-full;
+    @apply xl:max-w-[1150px] 2xl:max-w-[1140px] lg:max-w-[940px] md:max-w-[778px] lg:px-0 px-8 mx-auto w-full md:px-[20px];
 
   }
 
